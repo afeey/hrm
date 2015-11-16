@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CAC808B6-BE38-4CA8-8F47-851A46428148}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hrm</RootNamespace>
+    <AssemblyName>Hrm</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeManage.Designer.cs">
+      <DependentUpon>EmployeeManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalClass.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizationManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrganizationManage.Designer.cs">
+      <DependentUpon>OrganizationManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectOrganization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectOrganization.Designer.cs">
+      <DependentUpon>SelectOrganization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Src\Bll\EmployeeBll.cs" />
+    <Compile Include="Src\Bll\OrganizationBll.cs" />
+    <Compile Include="Src\Bll\LeaveRecordBll.cs" />
+    <Compile Include="Src\Bll\SalaryRecordBll.cs" />
+    <Compile Include="Src\Bll\UserBll.cs" />
+    <Compile Include="Src\Bll\InsureBll.cs" />
+    <Compile Include="Src\Bll\PositionBll.cs" />
+    <Compile Include="Src\Bll\PosTitleBll.cs" />
+    <Compile Include="Src\Bll\EmployeePosTitleBll.cs" />
+    <Compile Include="Src\Common\App.cs" />
+    <Compile Include="Src\Dal\AccessHelper.cs" />
+    <Compile Include="Src\Dal\EmployeeDal.cs" />
+    <Compile Include="Src\Dal\OrganizationDal.cs" />
+    <Compile Include="Src\Dal\LeaveRecordDal.cs" />
+    <Compile Include="Src\Dal\SalaryRecordDal.cs" />
+    <Compile Include="Src\Dal\UserDal.cs" />
+    <Compile Include="Src\Dal\InsureDal.cs" />
+    <Compile Include="Src\Dal\PositionDal.cs" />
+    <Compile Include="Src\Dal\PosTitleDal.cs" />
+    <Compile Include="Src\Dal\EmployeePosTitleDal.cs" />
+    <Compile Include="Src\Model\Employee.cs" />
+    <Compile Include="Src\Model\Organization.cs" />
+    <Compile Include="Src\Model\LeaveRecord.cs" />
+    <Compile Include="Src\Model\SalaryRecord.cs" />
+    <Compile Include="Src\Model\User.cs" />
+    <Compile Include="Src\Model\Insure.cs" />
+    <Compile Include="Src\Model\Position.cs" />
+    <Compile Include="Src\Model\PosTitle.cs" />
+    <Compile Include="Src\Model\EmployeePosTitle.cs" />
+    <Compile Include="UpdateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateEmployee.Designer.cs">
+      <DependentUpon>UpdateEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrganization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrganization.Designer.cs">
+      <DependentUpon>AddOrganization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateOrganization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateOrganization.Designer.cs">
+      <DependentUpon>UpdateOrganization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManage.Designer.cs">
+      <DependentUpon>UserManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateUser.Designer.cs">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionManage.Designer.cs">
+      <DependentUpon>PositionManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPosition.Designer.cs">
+      <DependentUpon>AddPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatePosition.Designer.cs">
+      <DependentUpon>UpdatePosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PosTitleManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PosTitleManage.Designer.cs">
+      <DependentUpon>PosTitleManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPosTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPosTitle.Designer.cs">
+      <DependentUpon>AddPosTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePosTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdatePosTitle.Designer.cs">
+      <DependentUpon>UpdatePosTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveRecordManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveRecordManage.Designer.cs">
+      <DependentUpon>LeaveRecordManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddLeaveRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddLeaveRecord.Designer.cs">
+      <DependentUpon>AddLeaveRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateLeaveRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateLeaveRecord.Designer.cs">
+      <DependentUpon>UpdateLeaveRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalaryRecordManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalaryRecordManage.Designer.cs">
+      <DependentUpon>SalaryRecordManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSalaryRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSalaryRecord.Designer.cs">
+      <DependentUpon>AddSalaryRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSalaryRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateSalaryRecord.Designer.cs">
+      <DependentUpon>UpdateSalaryRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsureManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsureManage.Designer.cs">
+      <DependentUpon>InsureManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddInsure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddInsure.Designer.cs">
+      <DependentUpon>AddInsure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateInsure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateInsure.Designer.cs">
+      <DependentUpon>UpdateInsure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeePosTitleManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeePosTitleManage.Designer.cs">
+      <DependentUpon>EmployeePosTitleManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEmployeePosTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmployeePosTitle.Designer.cs">
+      <DependentUpon>AddEmployeePosTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectEmployee.Designer.cs">
+      <DependentUpon>SelectEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateEmployeePosTitle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateEmployeePosTitle.Designer.cs">
+      <DependentUpon>UpdateEmployeePosTitle.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeManage.resx">
+      <DependentUpon>EmployeeManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrganizationManage.resx">
+      <DependentUpon>OrganizationManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SelectOrganization.resx">
+      <DependentUpon>SelectOrganization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateEmployee.resx">
+      <DependentUpon>UpdateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrganization.resx">
+      <DependentUpon>AddOrganization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateOrganization.resx">
+      <DependentUpon>UpdateOrganization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManage.resx">
+      <DependentUpon>UserManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateUser.resx">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionManage.resx">
+      <DependentUpon>PositionManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPosition.resx">
+      <DependentUpon>AddPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatePosition.resx">
+      <DependentUpon>UpdatePosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PosTitleManage.resx">
+      <DependentUpon>PosTitleManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPosTitle.resx">
+      <DependentUpon>AddPosTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdatePosTitle.resx">
+      <DependentUpon>UpdatePosTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveRecordManage.resx">
+      <DependentUpon>LeaveRecordManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddLeaveRecord.resx">
+      <DependentUpon>AddLeaveRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateLeaveRecord.resx">
+      <DependentUpon>UpdateLeaveRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalaryRecordManage.resx">
+      <DependentUpon>SalaryRecordManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSalaryRecord.resx">
+      <DependentUpon>AddSalaryRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateSalaryRecord.resx">
+      <DependentUpon>UpdateSalaryRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsureManage.resx">
+      <DependentUpon>InsureManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddInsure.resx">
+      <DependentUpon>AddInsure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateInsure.resx">
+      <DependentUpon>UpdateInsure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeePosTitleManage.resx">
+      <DependentUpon>EmployeePosTitleManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEmployeePosTitle.resx">
+      <DependentUpon>AddEmployeePosTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectEmployee.resx">
+      <DependentUpon>SelectEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateEmployeePosTitle.resx">
+      <DependentUpon>UpdateEmployeePosTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\hrm.accdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="icon2.ico" />
+    <None Include="Resources\person.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\bg.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
